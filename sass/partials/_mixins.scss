@@ -1,0 +1,11 @@
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+@mixin theme($property, $light-color, $dark-color) {
+  @if $current-theme == "light" {
+    #{$property}: $light-color;
+  } @else {
+    #{$property}: $dark-color;
+  }
+}
